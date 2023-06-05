@@ -1,0 +1,3 @@
+[submodule "projects/mh-patient"]
+	path = projects/mh-patient
+	url = https://github.com/itsmelatif/angular-ngprime-patient.git
