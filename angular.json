@@ -130,6 +130,42 @@
           }
         }
       }
+    },
+    "MhTheme": {
+      "projectType": "library",
+      "root": "projects/mh-theme",
+      "sourceRoot": "projects/mh-theme/src",
+      "prefix": "mh-theme",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mh-theme/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mh-theme/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mh-theme/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/mh-theme/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
